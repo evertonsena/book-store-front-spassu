@@ -1,0 +1,10 @@
+.lock-wscript
+.idea
+.env
+app_front/build/*
+app_front/prebuilds/*
+app_front/node_modules
+app_front/.env
+app_front/.env.development
+app_front/.env.test.local
+app_front/.env.production

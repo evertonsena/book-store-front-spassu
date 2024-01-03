@@ -1,0 +1,22 @@
+.btn{
+    &-primary {
+        color: #fff;
+        background-color: #005C97;
+        border-color: #005C97;
+    }
+    &-success {
+        color: #fff;
+        background-color: #36bea6;
+        border-color: #36bea6;
+    }
+    &-info {
+        color: #fff;
+        background-color: #2962FF;
+        border-color: #2962FF;
+    }
+    &-danger {
+        color: #fff;
+        background-color: #f62d51;
+        border-color: #f62d51;
+    }
+}

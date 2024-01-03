@@ -1,0 +1,136 @@
+// Here you can add other styles
+.MuiPaper-root-6 {
+    margin-bottom: 2rem;
+}
+.MuiPaper-rounded-7{
+    border-radius: 0;
+}
+.MuiTableCell-root-132{
+    padding: 0!important;
+}
+
+.MuiTableCell-root-1160{
+    padding: 0!important;
+}
+
+body {
+    font-family: "Nunito Sans",sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    overflow-x: hidden;
+    color: #3e5569;
+    background: #eef5f9;
+}
+
+#barra_decea{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 124px;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+}
+
+.navbar-brand > img {
+    object-fit: contain;
+    object-position: center;
+    height: 40px;
+    width: 115px;
+}
+
+.app {
+    padding-top: 125px;
+    &-header{
+        background: #fff;
+        position: relative;
+        z-index: 50;
+        box-shadow: 1px 0 7px rgba(0,0,0,.05);
+        height: 64px;
+        box-sizing: border-box;
+        transition: .2s ease-in;
+        border-bottom: 0;
+    }
+
+    &-body{
+        .sidebar{
+            background: #fff;
+            box-shadow: 1px 0 20px rgba(0,0,0,.08);
+            transition: .2s ease-in;
+            color: #3e5569;
+            .nav{
+                padding: 15px 0 0;
+                &-title {
+                    padding: 0.75rem 1rem;
+                    font-size: 80%;
+                    font-weight: 700;
+                    color: #3e5569;
+                    text-transform: uppercase;
+                }
+                &-link {
+                    display: block;
+                    padding: 0.75rem 1rem;
+                    color: #3e5569;
+                    text-decoration: none;
+                    background: transparent;
+                    &:hover{
+                        .nav-icon {
+                            color: #3e5569;
+                        }
+                    }
+                    &.active .nav-icon {
+                        color: #3e5569;
+                    }
+                }
+
+                &-icon{
+                    color: #3e5569;
+                }
+
+                &-dropdown{
+                    &.open {
+                        background: #3e5569;
+                        .nav-icon{
+                            color: #FFFFFF;
+                        }
+                    }
+                    &-items{
+                        .nav-item{
+                            padding: 0 0 0 20px;
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+
+            &-minimizer{
+                background-color: transparent;
+            }
+        }
+        .main{
+        }
+    }
+
+    &-footer{
+        text-align: center;
+        background: transparent;
+        border-top: 0;
+        color: #3e5569;
+        span {
+            width: 100%;
+        }
+    }
+}
+
+.breadcrumb{
+    border-bottom: 0;
+    background: transparent;
+}
+
+@media (min-width: 992px){
+    .header-fixed .app-body {
+        margin-top: 64px;
+    }
+}

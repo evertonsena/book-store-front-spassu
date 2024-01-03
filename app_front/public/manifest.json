@@ -1,0 +1,15 @@
+{
+  "short_name": "Start kit",
+  "name": "CoreUI React Start Kit",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#005C97",
+  "background_color": "#eef5f9"
+}

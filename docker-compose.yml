@@ -1,0 +1,34 @@
+version: '2'
+services:
+    # data-front
+    data-front:
+        container_name: ${CONTAINER_NAME}_data-front
+        image: busybox
+        volumes:
+            - .${DOCUMENT_ROOT_FRONT}:${DOCUMENT_ROOT}
+            - ./docker/nodefront/scripts:/scripts
+    # node com yarn - use NGINX_FRONT_PORT
+    front_build:
+        container_name: ${CONTAINER_NAME}_buildfront
+        build: ./docker/nodefront/.
+        volumes_from:
+            - data-front
+        ports:
+            - "${NGINX_FRONT_PORT}:3000"
+        working_dir: ${DOCUMENT_ROOT}
+        entrypoint: /scripts/bootstrap-dev.sh
+    # nginx front
+    front:
+        container_name: ${CONTAINER_NAME}_front
+        build: ./docker/nginx-front
+        volumes_from:
+            - data-front
+        restart: always
+        depends_on:
+            - front_build
+        volumes:
+            - ./docker/nginx-front/conf.d:/etc/nginx/conf.d
+        ports:
+            - "9091:8080"
+            - "4440:443"
+        working_dir: ${DOCUMENT_ROOT}

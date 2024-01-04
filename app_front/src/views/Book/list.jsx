@@ -56,7 +56,9 @@ class CSDatatable extends Component {
                 name: "anopublicacao",
                 label: "Publicado em",
                 type: 'number',
-                max: 4,
+                placeholder: 'Informe o ano com 4 digitos...',
+                minLength: 4,
+                maxLength: 4,
                 visible: {
                     list: true,
                     create: true,
